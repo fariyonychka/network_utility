@@ -1,4 +1,4 @@
-#include "traceroute.h"
+#include "/home/yustyna/traceroute_project/include/traceroute.h"
 #include <iostream>
 
 int main(int argc, char* argv[]) {
