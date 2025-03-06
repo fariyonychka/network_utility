@@ -14,3 +14,19 @@ void traceRoute(const std::string& hostname, int maxHops) {
     std::cout << "Socket created\n";
     close(sock);
 }
+
+int calculateChecksum(void* buffer, int length) {
+    unsigned short* buf = (unsigned short*)buffer;
+    unsigned int sum = 0;
+    unsigned short result;
+    for(int i=0; i<length/2; i++) {
+        sum += buf[i];
+    }
+    if(length % 2) {
+        sum += ((unsigned char*)buffer)[length-1];
+    }
+    sum = (sum >> 16) + (sum & 0xFFFF);
+    result = ~sum;
+    return result;
+}
+
