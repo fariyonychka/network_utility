@@ -1,4 +1,4 @@
-#include "/home/yustyna/traceroute_project/include/traceroute.h"
+#include "../include/traceroute.h"
 #include <iostream>
 #include <sys/socket.h>
 #include <netinet/ip_icmp.h>
