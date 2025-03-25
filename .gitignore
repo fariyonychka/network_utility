@@ -1,0 +1,15 @@
+bin/
+build/
+*.o
+*.out
+*.ipk
+
+
+*.log
+
+
+*.tmp
+*.swp
+
+
+staging_dir/
